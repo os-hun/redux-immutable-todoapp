@@ -1,7 +1,23 @@
 import React from 'react';
+import useApp from '../hooks/useApp';
 
 const App: React.FC = () => {
-  return <h1>Hello World!!</h1>
+  const { todos, Actions } = useApp();
+
+  return (
+    <ul>
+      {todos && todos.size ? (
+        todos.map((todo: any, index: any) => {
+          return <li key={index}>{todo.get('title')}</li>
+        })
+      ) : (
+        <p>none</p>
+      )}
+      <button onClick={() => Actions.add({ title: 'test' })}>
+        add
+      </button>
+    </ul>
+  )
 };
 
 export default App
