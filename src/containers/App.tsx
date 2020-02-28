@@ -9,14 +9,18 @@ const App: React.FC = () => {
       <ul data-testid="result">
         {todos && todos.size ? (
           todos.map((todo: any, index: any) => {
-            return <li key={index}>{todo.get('title')}</li>
+            return <li key={index}>{todo.get('text')}</li>
           })
         ) : (
           <p>none</p>
         )}
       </ul>
       <form onSubmit={onSubmit}>
-        <input type="text" onChange={(e) => set_query(e.target.value)} />
+        <input
+          type="text"
+          onChange={(e) => set_query(e.target.value)}
+          aria-label="input"
+        />
         <button>
           add
         </button>

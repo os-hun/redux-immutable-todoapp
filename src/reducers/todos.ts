@@ -14,12 +14,12 @@ const TodoReducer: Reducer<any, any> = (
 
   switch (action.type) {
     case ADD_TODO:
-      const { title } = action.payload.data;
+      const { text } = action.payload.data;
       return {
         ...state,
         todos: todos.push(
           Map({
-            title
+            text
           })
         )
       };

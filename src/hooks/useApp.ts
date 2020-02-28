@@ -16,7 +16,7 @@ const useApp = () => {
   const Actions = {
     add: async () => {
       try {
-        dispatch(add_todo({ title: query }))
+        dispatch(add_todo({ text: query }))
       } catch (e) {
         console.log(e)
       }
