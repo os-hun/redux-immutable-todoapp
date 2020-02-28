@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, cleanup, fireEvent, act} from '@testing-library/react';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from 'store';
 import '@testing-library/jest-dom/extend-expect';
