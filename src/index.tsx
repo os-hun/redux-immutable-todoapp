@@ -1,13 +1,8 @@
-import * as React from 'react';
-import { render } from "react-dom";
+import React from 'react';
+import ReactDOM from "react-dom";
+import App from 'containers/App';
 
-const App: React.FC = () => {
-  return (
-    <h1>Hello World!!</h1>
-  )
-};
-
-render(
+ReactDOM.render(
   <App />,
   document.getElementById('app')
 );
