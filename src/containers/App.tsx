@@ -1,5 +1,5 @@
 import React from 'react';
-import useApp from '../hooks/useApp';
+import useApp from 'hooks/useApp';
 
 const App: React.FC = () => {
   const { todos, Actions } = useApp();

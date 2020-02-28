@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { add_todo } from "../actions";
+import { add_todo } from "actions";
 
 const todosSelector = (state: any) => state.TodoReducer.todos;
 

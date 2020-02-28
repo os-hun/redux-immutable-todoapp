@@ -29,7 +29,8 @@ export default {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx']
+    modules: [src, "node_modules"],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 
   plugins: [
