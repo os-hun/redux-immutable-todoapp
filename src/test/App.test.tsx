@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, cleanup } from '@testing-library/react';
+import {render, cleanup, fireEvent} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from '../store';
 import '@testing-library/jest-dom/extend-expect';
@@ -17,5 +17,13 @@ describe('App', () => {
     );
     expect(getByTestId('result')).toHaveTextContent('none');
   });
-  it.todo('「add」ボタンを押すとtodoが追加される')
+  it('「add」ボタンを押すとtodoが追加される', () => {
+    const { getByTestId, getByText } = render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+    fireEvent.click(getByText('add'));
+    expect(getByTestId('result')).toHaveTextContent('test');
+  });
 });

@@ -5,16 +5,14 @@ const App: React.FC = () => {
   const { todos, Actions } = useApp();
 
   return (
-    <ul>
-      <div data-testid="result">
-        {todos && todos.size ? (
-          todos.map((todo: any, index: any) => {
-            return <li key={index}>{todo.get('title')}</li>
-          })
-        ) : (
-          <p>none</p>
-        )}
-      </div>
+    <ul data-testid="result">
+      {todos && todos.size ? (
+        todos.map((todo: any, index: any) => {
+          return <li key={index}>{todo.get('title')}</li>
+        })
+      ) : (
+        <p>none</p>
+      )}
       <button onClick={() => Actions.add({ title: 'test' })}>
         add
       </button>
