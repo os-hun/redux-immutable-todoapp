@@ -11,3 +11,7 @@ redux と immutable.js のサンプルアプリです。
 ``` 
   yarn run start
 ```
+テスト実行
+```
+yarn jest 
+```
