@@ -17,6 +17,7 @@ describe('App', () => {
     );
     expect(getByTestId('result')).toHaveTextContent('none');
   });
+
   it('「add」ボタンを押すとtodoが追加される', () => {
     const { getByTestId, getByText } = render(
       <Provider store={store}>
