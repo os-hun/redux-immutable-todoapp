@@ -9,7 +9,7 @@ import App from 'containers/App';
 afterEach(cleanup);
 
 describe('App', () => {
-  it('初期はnoneが表示される', () => {
+  it('値がないとnoneが表示される', () => {
     const { getByTestId } = render(
       <Provider store={store}>
         <App />
