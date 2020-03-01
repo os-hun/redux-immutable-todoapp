@@ -6,6 +6,7 @@ const App: React.FC = () => {
 
   return (
     <div>
+      <h1>Todo App</h1>
       <ul data-testid="result">
         {todos && todos.size ? (
           todos.map((todo: any, index: any) => {
